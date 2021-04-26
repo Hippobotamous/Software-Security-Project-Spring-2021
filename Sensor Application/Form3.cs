@@ -61,8 +61,6 @@ namespace Sensor_Application
                 listBox1.Items.Add(newIP);
                 z += 1;
             }
-            
-
         }
 
         private void button2_Click(object sender, EventArgs e)

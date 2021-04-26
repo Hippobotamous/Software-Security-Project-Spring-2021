@@ -17,11 +17,6 @@ namespace Sensor_Application
             InitializeComponent();
         }
 
-        public Form1(string nameOfDevice)
-        {
-            InitializeComponent();
-        }
-
         private string deviceName;
 
         public string getDeviceName
@@ -37,10 +32,22 @@ namespace Sensor_Application
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string sql1 = "SELECT";
+            string sql2 = "CHOOSE";
+            string sql3 = "WHERE";
+            string sql4 = "COUNT";
+            string sql5 = "=";
+            string sql6 = "*";
+            string sql7 = "WHERE";
+            string sql8 = "AND";
             string passwordVT = "vt";
             string usernameVT = "vt";
             string passwordPSX = "psx";
             string usernamePSX = "psx";
+
+            if (textBox2.Text == sql1 || textBox2.Text == sql2 || textBox2.Text == sql3 || textBox2.Text == sql4
+                || textBox2.Text == sql5 || textBox2.Text == sql6 || textBox2.Text == sql7 || textBox2.Text == sql8)
+                MessageBox.Show("Invalid Credentials"); //Talk about how error messages don't give anything away
 
             if (textBox2.Text != usernameVT && textBox2.Text != usernamePSX)
                 MessageBox.Show("Invalid Credentials");
@@ -53,10 +60,13 @@ namespace Sensor_Application
             {
                 MessageBox.Show("Correct Credentials");
                 getDeviceName = textBox2.Text;
+                MessageBox.Show(getDeviceName);
                 MessageBox.Show(textBox2.Text);
                 this.Hide();
                 Form2 f2 = new Form2();
                 f2.ShowDialog();
+                
+                
             }
 
 
@@ -69,7 +79,7 @@ namespace Sensor_Application
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           Will8787??
+
 
         }
 
